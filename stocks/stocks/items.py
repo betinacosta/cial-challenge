@@ -7,6 +7,10 @@ import scrapy
 
 
 class StocksItem(scrapy.Item):
-    # define the fields for your item here like:
-    # name = scrapy.Field()
-    pass
+    five_days = scrapy.Field()
+    one_month = scrapy.Field()
+    three_months =  scrapy.Field()
+    year_to_date = scrapy.Field()
+    one_year  = scrapy.Field()
+    competitors = scrapy.Field()
+    market_cap = scrapy.Field()
