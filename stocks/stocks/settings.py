@@ -14,7 +14,7 @@ NEWSPIDER_MODULE = "stocks.spiders"
 
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
-#USER_AGENT = "stocks (+http://www.yourdomain.com)"
+USER_AGENT = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36"
 
 # Obey robots.txt rules
 ROBOTSTXT_OBEY = True
@@ -37,16 +37,36 @@ ROBOTSTXT_OBEY = True
 #TELNETCONSOLE_ENABLED = False
 
 # Override the default request headers:
-#DEFAULT_REQUEST_HEADERS = {
-#    "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
-#    "Accept-Language": "en",
-#}
+DEFAULT_REQUEST_HEADERS = {
+   "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+   "Accept-Language": "en",
+}
 
 # Enable or disable spider middlewares
 # See https://docs.scrapy.org/en/latest/topics/spider-middleware.html
-#SPIDER_MIDDLEWARES = {
-#    "stocks.middlewares.StocksSpiderMiddleware": 543,
-#}
+SPIDER_MIDDLEWARES = {
+   "stocks.middlewares.StocksSpiderMiddleware": 543,
+}
+
+SPIDERMON_ENABLED = True
+
+# Enable or disable extensions
+# See https://docs.scrapy.org/en/latest/topics/extensions.html
+EXTENSIONS = {
+   "spidermon.contrib.scrapy.extensions.Spidermon": 500,
+}
+
+# Configure item pipelines
+# See https://docs.scrapy.org/en/latest/topics/item-pipeline.html
+ITEM_PIPELINES = {
+   "spidermon.contrib.scrapy.pipelines.ItemValidationPipeline": 800,
+}
+
+SPIDERMON_VALIDATION_SCHEMAS = [
+   "stocks/res/schema.json"
+]
+
+SPIDERMON_SPIDER_CLOSE_MONITORS = ("stocks.monitors.SpiderCloseMonitorSuite",)
 
 # Enable or disable downloader middlewares
 # See https://docs.scrapy.org/en/latest/topics/downloader-middleware.html
