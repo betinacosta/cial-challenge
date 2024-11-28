@@ -37,7 +37,7 @@ As my docker-compose wasn't successful I left the `.env` file on github, but I k
 - Docker
 
 ### setup
-`$ make setup`
+`$ make setup_db`
 
 ### run
 `$ cd cial`
