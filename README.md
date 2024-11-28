@@ -26,6 +26,9 @@ Post data in the urls, so I changed it a little.
 This wasn't my best performance on an assignment, but I'm glad that I tried. I was able to identify some things that I need to learn
 more, and applying some knowledge.
 
+### .env
+As my docker-compose wasn't successful I left the `.env` file on github, but I know is not a good practice.
+
 ## Running the application
 
 ### Requirements:
