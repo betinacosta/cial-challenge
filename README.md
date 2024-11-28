@@ -37,11 +37,16 @@ As my docker-compose wasn't successful I left the `.env` file on github, but I k
 - Docker
 
 ### setup
+`$ cd cial`
 `$ make setup_db`
 
 ### run
 `$ cd cial`
 `$ make run`
+
+### test
+`$ cd cial`
+`$ make unit_tests`
 
 ### Request examples:
 
