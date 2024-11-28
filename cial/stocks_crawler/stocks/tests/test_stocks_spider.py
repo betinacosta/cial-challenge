@@ -1,7 +1,7 @@
 import pytest
 import logging
 
-from stocks.spiders.stocks_spider import StocksSpider
+from stocks_crawler.stocks.spiders.stocks_spider import StocksSpider
 logger = logging.getLogger("StocksSpider")
 
 

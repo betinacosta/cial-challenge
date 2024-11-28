@@ -14,3 +14,4 @@ class StocksItem(scrapy.Item):
     one_year  = scrapy.Field()
     competitors = scrapy.Field()
     market_cap = scrapy.Field()
+    company_name = scrapy.Field()

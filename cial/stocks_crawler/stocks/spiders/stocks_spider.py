@@ -2,7 +2,7 @@ import scrapy
 import logging
 import regex
 import re
-from stocks.items import StocksItem
+from stocks_crawler.stocks.items import StocksItem
 
 
 class StocksSpider(scrapy.Spider):
@@ -51,6 +51,7 @@ class StocksSpider(scrapy.Spider):
         stocks_item["one_year"] = performances["one_year"]
         stocks_item["competitors"] = competitors
         stocks_item["market_cap"] = self.format_market_cap(key_data.get("Market Cap"))
+        stocks_item["company_name"] = response.css("h1.company__name::text").get()
 
         return stocks_item
 
