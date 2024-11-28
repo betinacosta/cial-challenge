@@ -47,6 +47,3 @@ more, and applying some knowledge.
 --header 'Content-Type: application/json' \
 --data '{"amount":5, "stock_symbol":"aapl"}'`
 
-### Tests
-`$ cd cial`
-`$ make tests`

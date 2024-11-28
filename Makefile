@@ -5,4 +5,3 @@ setup_db:
 run:
 	poetry run python -m app
 
-tests:
